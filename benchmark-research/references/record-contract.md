@@ -22,6 +22,6 @@ Allowed `kind`: `dataset`, `suite`, `protocol`, `metric`, `tool`, `proposal`. Al
 {"files":[{"path":"books/chapters/A1.md","sha256":"<64 lowercase hex digits>","rights":"allowed"},{"path":"pdf/chapters/A1.pdf","sha256":"<64 lowercase hex digits>","rights":"allowed"}]}
 ```
 
-List every public deliverable, including inventory and audit ledgers, but exclude restricted, uncertain, or local-only originals. Generate hashes after the final render. `scripts/audit_delivery.py` verifies listed hashes and rejects unsafe paths or non-`allowed` files. An offline ZIP, if created, should contain only manifest-listed files; check its member names and CRC independently.
+List every public deliverable, including inventory and audit ledgers, but exclude the manifest itself because it cannot contain its own hash. Also exclude restricted, uncertain, or local-only originals. Generate hashes after the final render. `scripts/audit_delivery.py` verifies listed hashes and rejects unsafe paths or non-`allowed` files. An offline ZIP, if created, may add the manifest to its manifest-listed files; check member names and CRC independently.
 
 The structural audit also expects each chapter Markdown to contain the exact five-column header and a unique `### <ID> ...` heading for every inventory entry. It compares inventory IDs with entry-audit IDs and requires each chapter's Markdown and PDF in the manifest. The script's checks do not replace reading the report or confirming factual sources and licenses.

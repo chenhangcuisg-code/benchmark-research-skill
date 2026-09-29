@@ -6,6 +6,8 @@ For each source, record the canonical URL, publisher/author, release tag or immu
 
 For each case, retain the original input, necessary context and constraints, candidates, and public gold answer or target. Preserve modalities: images, audio, video, repository state, tools, hidden tests, and execution environment may be essential to the task. If a field is unavailable, mark it unavailable; do not infer it from a model output or paper example. Cite a stable record ID or zero-based row number, split/configuration, file path or JSON Pointer, source revision, and local snapshot hash. If a PDF excerpt is all that exists, label it as a paper example and do not call it a released dataset row.
 
+Audit the role of each linked item separately from whether its URL resolves. A released dataset row, repository task file, documentation demo, system prompt, model evaluation trace, paper example, and third-party mirror are different evidence types. Record `evidence_role`, `case_completeness`, and whether official row identity was verified; a real file or a successful HTTP check does not itself make a complete original task. For a mirror, compare original identifiers, field values, and model-visible bytes or pixels where possible, and disclose any absent official per-file hash. Keep the status of a parent benchmark unchanged when only a related example or partial input was found.
+
 Classify categories using the source's `subject`, `type`, `task`, `config`, or equivalent fields. Distinguish author-defined categories from analyst groupings. State which principal categories have actual cases and which remain uncovered. A single row cannot demonstrate complete category coverage.
 
 Use these entry states consistently:
@@ -21,6 +23,8 @@ Use these entry states consistently:
 If a public derivative or author mirror is found, preserve its own ID, revision, hash, and rights. Record the tested identity relationship (e.g., ID intersection and field equality) and the missing official components. Never silently promote derivative rows to a gated official split. For `restricted` or `unavailable`, log the attempted URL, HTTP/error response or exact absence, date, and next plausible lead. Do not bypass access controls.
 
 Rights review is per artifact. A dataset card's license may not cover individual paper full texts, third-party images, contest statements, or hidden tests. Use `allowed`, `metadata_only`, `private`, or `unknown` for each case/file. Put only `allowed` files in a public package; `unknown` defaults to metadata and source locator. Brief quotations still require attribution and should stay within applicable limits.
+
+Check repeated excerpts across the whole public package, not only one card. When the underlying corpus has mixed or uncertain rights, use category, pinned source revision, split, row or archive-member locator, and full-record hash in public cards; keep the full input in an authorized local research copy and link to the publisher's access point. Check every embedded link as well as the card's primary URL, and record all owners when several cards reuse one source. Do not publish expiring signed CDN redirect URLs as stable source locators.
 
 ## Complete-collection gate
 

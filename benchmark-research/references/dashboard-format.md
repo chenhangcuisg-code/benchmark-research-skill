@@ -16,6 +16,8 @@ When a source paper prints a useful example but the released dataset row is unav
 
 For internal study, source-linked `study_example` cards may illustrate the task when no public row can be obtained. Mark every such input and answer as constructed, link the benchmark description as the **task basis** directly below the title, and state that it cannot replace a released row or hidden gold. Use `public_row` only for a record whose source row and answer have been checked. These cards can remove empty reading views while the original audit state and remaining data or protocol limits stay visible.
 
+When the user requires authentic cases, do not fill gaps with constructed `study_example` cards. Check the original release, a public dataset or mirror, and a paper or other independent source for each unresolved entry. Record the actual URLs, outcomes, and reason a candidate cannot be matched to the requested version. If three independent attempts still do not yield a verifiable case, leave the case list empty and expose `case_gap_reason` plus `case_gap_attempts` on that entry; the dashboard shows the three source links in the empty case view. Keep `mirror_row` visibly separate from an official `public_row` and state when identity against a gated release remains unverified.
+
 Search the actual text. Distinguish directory-field search from full original-case and selected-attachment search. State which files are included, display loading/completion or failure, and ensure a record near the end of the index is findable. A filename search must not be described as full-text data search. Full corpus caches can remain outside the index, with that scope disclosed. Zero results must be distinguishable from a failed or unfinished index load.
 
 ## Reusable builder

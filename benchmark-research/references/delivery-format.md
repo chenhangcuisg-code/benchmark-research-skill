@@ -4,6 +4,8 @@ Use this format for requested PDF deliverables. For searchable or large interact
 
 Create one source Markdown and one PDF for each user-defined chapter. Chapter names and count come from the project, not from the sample handbook. Each chapter begins with its scope and a five-column overview in this exact order:
 
+When a chapter contains hundreds of entries or long original records, make a compact reading PDF without losing the evidence: keep the five-column overview and one detailed audit section per entry in the PDF, then place every cited full original in a stable per-entry machine-readable index. Each index record must point to the unchanged attachment, its actual SHA-256, original URL and revision, split/configuration, row or record ID, visible gold, rights, and exact missing fields. Link the index from the PDF and root index. Verify every referenced attachment hash and every local PDF link. Count referenced records separately from unique original records, since several entries may cite the same case. Keep one chapter per PDF (for example, one L or one B); do not concatenate a whole series into one large volume. Page reduction changes presentation only and must never upgrade a `partial` or `restricted` source state.
+
 `Benchmark | 具体数据例子 | 数据分类 | 题目类型 | 模型需要做到`
 
 The example cell gives a short authentic case cue and points to its detailed section, or says why no original is available. It must not silently use a fabricated question. Each inventory ID has exactly one `### <ID> <name>` detailed section. A useful section contains:

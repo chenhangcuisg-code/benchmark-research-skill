@@ -1,5 +1,7 @@
 # Minimal machine-readable contract
 
+The contract below is the PDF-handbook format checked by `audit_delivery.py`. Dashboard deliveries use the normalized graph in [dashboard-format.md](dashboard-format.md), with `catalog.json` as the chapter/entry/case/file inventory and `manifest.json` at the dashboard root. They are checked by `audit_dashboard.py`; they do not require a PDF for every chapter. Preserve or explicitly map an existing project's audit ledger rather than silently changing its statuses to fit this example.
+
 Paths below are relative to the output root. The script accepts extra fields, so projects can add richer evidence without changing this contract.
 
 `inventory.json`:

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>预训练评测 · 研究看板</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%230e6655'/%3E%3Cpath d='M11 11h7v18h-7zm11 0h7v8h-7zm0 12h7v6h-7z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="app.css">
+  <script defer src="data/catalog.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <aside class="sidebar" aria-label="章节导航">
+    <a class="brand" href="#explore"><span class="brand-symbol">▥</span><span>Benchmark Atlas<small>预训练评测研究看板</small></span></a>
+    <div class="sidebar-intro">以能力为入口，以原题为依据。</div>
+    <nav id="navigation"></nav>
+    <div class="sidebar-foot"><span class="live-dot"></span> 离线可用 · 数据有据可查<small id="audit-date"></small><a href="README.txt" target="_blank" rel="noopener">使用与打包说明 ↗</a></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" data-action="menu" aria-label="展开章节导航">☰</button>
+      <div class="breadcrumb" id="breadcrumb">研究工作台 <span>/</span> 评测目录</div>
+      <div class="top-actions"><a href="#explore?favorites=1&view=entries" class="quiet-button">☆ 收藏</a><a href="#compare" id="compare-nav" class="quiet-button">比较 <span>0</span></a><a href="#resources" class="quiet-button">数据文件</a></div>
+    </header>
+    <main id="main" tabindex="-1"><div class="loading">正在打开评测目录…</div></main>
+    <footer class="page-footer">来源审核与代表原题目录 · 未运行模型评测 <a href="catalog.json" download>导出完整目录 JSON</a><a href="manifest.json" target="_blank" rel="noopener">文件与 SHA-256 清单 ↗</a></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript>此看板需要启用 JavaScript。目录原始数据保存在 catalog.json 中。</noscript>
+</body>
+</html>

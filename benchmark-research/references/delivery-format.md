@@ -1,5 +1,7 @@
 # Handbook and PDF format
 
+Use this format for requested PDF deliverables. For searchable or large interactive catalogs, use [dashboard-format.md](dashboard-format.md) as the main reader and link existing PDFs as source views. The PDF requirements here do not apply to a dashboard-only delivery.
+
 Create one source Markdown and one PDF for each user-defined chapter. Chapter names and count come from the project, not from the sample handbook. Each chapter begins with its scope and a five-column overview in this exact order:
 
 `Benchmark | 具体数据例子 | 数据分类 | 题目类型 | 模型需要做到`

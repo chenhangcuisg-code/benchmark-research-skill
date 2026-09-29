@@ -8,6 +8,14 @@ Use chapter cards for orientation and an entry directory for scanning. Offer fil
 
 Give each entry an overview, complete explanation, original-case list, and source/attachment list. Keep all five overview fields available. Offer readable JSON fields alongside unchanged raw JSON; retain complete code, input context, candidates, answer encoding, and hashes. Load large records when opened, paginate large result sets, and keep surrounding navigation usable. Do not rely on embedding huge PDFs or dumping full JSON into every card.
 
+On every directory card and directly below each entry title, explain what a typical question looks like (`task`) and which capability it assesses (`requirement`). Keep the full fields in the overview as well. When the source wording is too terse or noisy, add a concise, clearly scoped explanation for that entry without changing the original source fields.
+
+Place a clickable original project or paper source immediately below the title on both directory cards and entry pages when the reviewed entry cites one. Use a precisely linked local source PDF page when the entry has no external source. Keep source links for paper examples and constructed study examples distinct from the entry-level source.
+
+When a source paper prints a useful example but the released dataset row is unavailable, a case card may use `source_kind: "paper_example"`. Name it “论文示例”, link the primary PDF to the exact page and figure/table, summarize only the shown input and answer, and state which row, split, gold, context or attachment remains missing. Keep the original audit status. Do not count a paper example as an obtained official test row or silently reassign it to a more specific version or category.
+
+For internal study, source-linked `study_example` cards may illustrate the task when no public row can be obtained. Mark every such input and answer as constructed, link the benchmark description as the **task basis** directly below the title, and state that it cannot replace a released row or hidden gold. Use `public_row` only for a record whose source row and answer have been checked. These cards can remove empty reading views while the original audit state and remaining data or protocol limits stay visible.
+
 Search the actual text. Distinguish directory-field search from full original-case and selected-attachment search. State which files are included, display loading/completion or failure, and ensure a record near the end of the index is findable. A filename search must not be described as full-text data search. Full corpus caches can remain outside the index, with that scope disclosed. Zero results must be distinguishable from a failed or unfinished index load.
 
 ## Reusable builder
@@ -47,6 +55,8 @@ The normalized JSON has these fields:
 ```
 
 PDF fields are optional. The reader requires the entry's original `source_markdown` path for resolving relative attachments. The example above defines metadata shape; it is not benchmark evidence. IDs use letters, numbers, `_` or `-`. Markdown is sanitized during rendering. No raw HTML may execute scripts or load arbitrary active content.
+
+`primary_source_url` is optional entry metadata for the cited project or paper entrance shown below the title. Derive it from the reviewed entry text and prefer a labeled benchmark entrance over incidental links. When absent, the reader can fall back to the entry's local PDF page.
 
 ## Packaging and checks
 
